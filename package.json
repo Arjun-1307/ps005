@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Arjun-1307.github.io/ps005/ ",
+  "homepage": "https://username.github.io/ps005/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
