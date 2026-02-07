@@ -106,4 +106,8 @@ input.error {
 
 .submit:hover {
   background: #1d4ed8;
+  color: aqua;
+}
+ motion.button {
+  cursor: pointer;
 }

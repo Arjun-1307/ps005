@@ -83,14 +83,15 @@ export default function App() {
 
           <div className="forgot">Forgot <label>Password?</label></div>
 
-          <motion.button
+          <motion.button 
             whileTap={{ scale: 0.96 }}
             className="submit"
             type="submit"
           >
-            Get Started
+           <div className="Start" >Get Started </div> 
           </motion.button>
         </form>
+        <p className="signup">Not having an account? <button onClick={() => { window.history.pushState({}, '', '/signup'); window.dispatchEvent(new PopStateEvent('popstate')); }}>Sign up</button></p>
       </motion.div>
     </div>
   );
