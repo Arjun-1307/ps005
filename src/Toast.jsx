@@ -24,6 +24,11 @@ export default function Toast({ toasts, removeToast }) {
               )}
               <span className="toast-message">{toast.message}</span>
             </div>
+            {/* progress bar that shrinks from right to left */}
+            <div
+              className={`toast-progress toast-progress-${toast.type}`}
+              style={{ animationDuration: `${toast.duration}ms` }}
+            />
             <button
               className="toast-close"
               onClick={() => removeToast(toast.id)}

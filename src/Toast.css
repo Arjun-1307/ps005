@@ -10,6 +10,7 @@
 }
 
 .toast {
+  position: relative; /* for progress bar absolutely positioned */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,6 +21,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
   animation: slideIn 0.3s ease-out;
+  animation-fill-mode: forwards;
 }
 
 .toast-success {
@@ -86,6 +88,34 @@
   }
   to {
     transform: scale(1);
+  }
+}
+
+
+/* progress line that grows from left to right */
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0; /* start collapsed so animation is visible */
+  animation: progressBar linear forwards;
+}
+
+.toast-progress-success {
+  background: rgba(255, 255, 255, 0.8); /* light/white for success */
+}
+
+.toast-progress-error {
+  background: rgba(255, 200, 200, 0.9); /* light red for error */
+}
+
+@keyframes progressBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
   }
 }
 

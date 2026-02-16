@@ -3,9 +3,10 @@ import { useState, useCallback } from "react";
 export function useToast() {
   const [toasts, setToasts] = useState([]);
 
-  const addToast = useCallback((message, type = "success", duration = 3000) => {
+  // default duration is 5000ms (5 seconds) as requested
+  const addToast = useCallback((message, type = "success", duration = 5000) => {
     const id = Date.now();
-    const toast = { id, message, type };
+    const toast = { id, message, type, duration };
 
     setToasts((prev) => [...prev, toast]);
 
